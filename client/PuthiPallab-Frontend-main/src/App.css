@@ -1,0 +1,100 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+.books__table
+  table
+  :is(th, td):is(
+    :nth-child(6),
+    :nth-child(7),
+    :nth-child(8),
+    :nth-child(9),
+    :nth-child(10)
+  ) {
+  text-align: center;
+}
+
+.genres__table table :is(th, td):is(:nth-child(5), :nth-child(6), ) {
+  text-align: center;
+}
+
+:is(
+    .user__table,
+    .books__table,
+    .issueRecord__table,
+    .waitlist__table,
+    .reviews__table,
+    .genres__table,
+    .overviewIssue__table
+  )
+  table
+  :is(th, td) {
+  white-space: nowrap;
+}
+
+.reviews__table
+  table
+  :is(th, td):is(:nth-last-child(1), :nth-last-child(2), :nth-last-child(4)) {
+  text-align: center;
+}
+
+.reviews__table table :is(th, td):is(:nth-last-child(3)) {
+  white-space: wrap;
+  max-width: 360px;
+  min-width: 260px;
+}
+
+.books__table table :is(th, td):is(:nth-child(5)) {
+  white-space: wrap;
+  max-width: 250px;
+  min-width: 180px;
+}
+
+/* Homepage */
+.home__genres {
+  clip-path: polygon(
+    0 0,
+    calc(50% - 30px) 0,
+    50% 30px,
+    calc(50% + 30px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .home__about--img {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 45px) 100%,
+      100% 140px,
+      calc(100% - 50px) 0
+    );
+  }
+
+  .home__genres {
+    clip-path: polygon(
+      0 0,
+      calc(50% - 40px) 0,
+      50% 40px,
+      calc(50% + 40px) 0,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home__about--img {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 55px) 100%,
+      100% 140px,
+      calc(100% - 80px) 0
+    );
+  }
+}
